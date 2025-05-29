@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>GestionBilletsTrain</display-name>
+
+    <!-- Welcome File -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file> 
+    </welcome-file-list>
+
+    <!-- ============================================================== -->
+    <!-- Servlet Definitions                                            -->
+    <!-- ============================================================== -->
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.HomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.AuthServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.AdminDashboardServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientDashboardServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.ClientDashboardServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GareServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.GareServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TrajetServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.TrajetServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VoyageServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.VoyageServlet</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.UserServlet</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>AnnulationServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.AnnulationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RechercheServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.RechercheServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReservationServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.ReservationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BilletServlet</servlet-name>
+        <servlet-class>com.iit.gestionbillets.controller.BilletServlet</servlet-class>
+    </servlet>
+    <!-- Add other servlet definitions here -->
+
+
+    <!-- ============================================================== -->
+    <!-- Servlet Mappings                                               -->
+    <!-- ============================================================== -->
+
+    <!-- Default servlet for static resources (CSS, JS, images) -->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.png</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.jpg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.jpeg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.gif</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.ico</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/</url-pattern> <!-- Maps to the root context -->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/auth</url-pattern> <!-- Base path for auth actions -->
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <url-pattern>/admin/dashboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientDashboardServlet</servlet-name>
+        <url-pattern>/client/dashboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GareServlet</servlet-name>
+        <url-pattern>/admin/gares</url-pattern> <!-- CRUD for Gares -->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TrajetServlet</servlet-name>
+        <url-pattern>/admin/trajets</url-pattern> <!-- CRUD for Trajets -->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VoyageServlet</servlet-name>
+        <url-pattern>/admin/voyages</url-pattern> <!-- CRUD for Voyages -->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/admin/utilisateurs</url-pattern> <!-- Management for Users -->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AnnulationServlet</servlet-name>
+        <url-pattern>/admin/annulations</url-pattern> <!-- Management for Cancellations -->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RechercheServlet</servlet-name>
+        <url-pattern>/recherche</url-pattern> <!-- Client search action -->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReservationServlet</servlet-name>
+        <url-pattern>/reservation</url-pattern> <!-- Client booking action -->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BilletServlet</servlet-name>
+        <url-pattern>/billet</url-pattern> <!-- Client ticket view/download -->
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>VoyageursServlet</servlet-name>
+    <servlet-class>com.iit.gestionbillets.controller.VoyageursServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>VoyageursServlet</servlet-name>
+    <url-pattern>/admin/voyageurs</url-pattern>
+</servlet-mapping>
+    
+
+
+    <!-- ============================================================== -->
+    <!-- Session Configuration                                          -->
+    <!-- ============================================================== -->
+    <session-config>
+        <session-timeout>30</session-timeout> <!-- In minutes -->
+    </session-config>
+
+    <!-- ============================================================== -->
+    <!-- Error Page Configuration                                       -->
+    <!-- ============================================================== -->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/WEB-INF/jsp/error/erreurGenerale.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/error/erreurGenerale.jsp</location> <!-- Or a specific 404 page -->
+    </error-page>
+     <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/jsp/error/erreurGenerale.jsp</location> <!-- Or a specific 500 page -->
+    </error-page>
+
+    <!-- ============================================================== -->
+    <!-- Filter Configuration (TODO)                                    -->
+    <!-- ============================================================== -->
+    <!--
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.iit.gestionbillets.filter.AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/client/*</url-pattern>
+        <url-pattern>/reservation</url-pattern>
+        <url-pattern>/billet</url-pattern>
+    </filter-mapping>
+    -->
+
+</web-app>
+
